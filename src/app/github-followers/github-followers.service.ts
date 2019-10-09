@@ -1,5 +1,5 @@
-import { Http } from '@angular/http';
 import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 @Injectable()
@@ -8,7 +8,7 @@ export class GithubFollowersService {
 
   constructor(private http: Http) {  }
 
-  getFollowers() { 
+  getFollowers() {
     return this.http.get(this._url)
       .map(response => response.json());
   }
